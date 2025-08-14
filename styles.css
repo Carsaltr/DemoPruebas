@@ -1,0 +1,36 @@
+:root{
+  --bg:#9aa0a6; /* fondo gris medio */
+  --panel:#f7f8f9;
+  --accent:#2563eb;
+  --ok:#16a34a;
+  --bad:#ef4444;
+}
+*{box-sizing:border-box;font-family:Inter,Segoe UI,Roboto,Arial,sans-serif}
+html,body,#app{height:100%;}
+body{margin:0;background:var(--bg);color:#111}
+.topbar{height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;background:rgba(255,255,255,0.06);backdrop-filter:blur(2px);}
+.brand{font-weight:600}
+.controls{display:flex;align-items:center;gap:10px}
+.timer{background:#fff;padding:6px 10px;border-radius:8px;font-weight:600}
+.btn{padding:8px 10px;border-radius:8px;border:1px solid rgba(0,0,0,0.08);background:#fff;cursor:pointer}
+.btn-primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+.workspace{display:flex;gap:16px;padding:18px;max-width:1100px;margin:18px auto}
+.left{flex:1}
+.right{width:300px}
+.panel{background:var(--panel);padding:12px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.08)}
+.panel-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.board-area{background:linear-gradient(180deg,#fff,#f3f4f6);height:420px;border-radius:8px;padding:12px;display:flex;align-items:center;justify-content:center}
+.board{display:grid;gap:4px}
+.cell{width:56px;height:56px;border-radius:6px;background:#e6eefc;border:1px solid rgba(0,0,0,0.06);display:flex;align-items:center;justify-content:center;font-weight:700}
+.piece{cursor:grab;user-select:none;border-radius:6px;display:flex;align-items:center;justify-content:center}
+.piece.dragging{opacity:0.7}
+.piece.C{background:#2563eb;color:white;width:calc(56px * var(--len) + (var(--len)-1)*4px);height:56px}
+.piece.block{background:#ef4444;color:white;width:56px;height:56px}
+.panel-actions{margin-top:10px;display:flex;gap:8px}
+.card{background:var(--panel);padding:12px;border-radius:10px}
+.progress{height:12px;background:#e6e6e6;border-radius:8px;overflow:hidden}
+.progress-fill{height:100%;width:0;background:linear-gradient(90deg,var(--accent),#60a5fa)}
+.footer{text-align:center;padding:12px;color:#fff;opacity:0.9}
+
+/* responsive */
+@media(max-width:900px){.workspace{flex-direction:column}.right{width:100%}}
