@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #b0b0b0;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #444;
+    color: white;
+}
+#game-area {
+    padding: 20px;
+}
+button {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+}
+#puzzle-container {
+    margin-top: 20px;
+    min-height: 300px;
+    background: white;
+    border: 2px solid #333;
+    padding: 10px;
+}

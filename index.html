@@ -1,63 +1,26 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Simulador Psicotécnico — Demo</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Pruebas</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="app">
-    <header class="topbar">
-      <div class="brand">Simulador Psicotécnico — Demo</div>
-      <div class="controls">
-        <div id="totalTimer" class="timer">30:00</div>
-        <button id="modeBtn" class="btn">Modo: Libre</button>
-      </div>
-    </header>
+    <div id="header">
+        <h1>Simulador de Pruebas Psicotécnicas</h1>
+        <div id="timer">Tiempo: <span id="time">120</span> s</div>
+    </div>
 
-    <main class="workspace">
-      <section class="left">
-        <div class="panel">
-          <div class="panel-header">
-            <div class="title">Ítem <span id="itemIndex">1</span>/20</div>
-            <div id="itemTimer" class="timer item-timer">03:00</div>
-          </div>
+    <div id="game-area">
+        <p>Selecciona un puzzle para iniciar:</p>
+        <button onclick="startGame('nino')">Puzzle Niño</button>
+        <button onclick="startGame('exploradores')">Puzzle Exploradores</button>
+        <button onclick="startGame('pinguino')">Puzzle Pingüino</button>
 
-          <div id="boardArea" class="board-area" aria-label="Tablero de puzzle"></div>
+        <div id="puzzle-container"></div>
+    </div>
 
-          <div class="panel-actions">
-            <button id="startBtn" class="btn btn-primary">Iniciar</button>
-            <button id="nextBtn" class="btn" disabled>Siguiente</button>
-            <button id="submitBtn" class="btn">Enviar (puntuar)</button>
-          </div>
-        </div>
-      </section>
-
-      <aside class="right">
-        <div class="card">
-          <h3>Modo</h3>
-          <select id="modeSelect">
-            <option value="free">Libre</option>
-            <option value="guided">Guiado</option>
-            <option value="exam">Examen</option>
-          </select>
-          <hr />
-          <h3>Progreso</h3>
-          <div id="progressBar" class="progress">
-            <div id="progressFill" class="progress-fill"></div>
-          </div>
-          <div id="score">Puntaje: 0</div>
-          <hr />
-          <h3>Instrucciones</h3>
-          <p>Arrastra las piezas con el mouse. En modo guiado el sistema marcará el movimiento sugerido.</p>
-        </div>
-      </aside>
-    </main>
-
-    <footer class="footer">Demo para práctica — fondo gris medio, cronómetro arriba derecha, arrastrar con mouse.</footer>
-  </div>
-
-  <script src="app.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
