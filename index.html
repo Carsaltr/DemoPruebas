@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simulador Psicotécnico — Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <div class="brand">Simulador Psicotécnico — Demo</div>
+      <div class="controls">
+        <div id="totalTimer" class="timer">30:00</div>
+        <button id="modeBtn" class="btn">Modo: Libre</button>
+      </div>
+    </header>
+
+    <main class="workspace">
+      <section class="left">
+        <div class="panel">
+          <div class="panel-header">
+            <div class="title">Ítem <span id="itemIndex">1</span>/20</div>
+            <div id="itemTimer" class="timer item-timer">03:00</div>
+          </div>
+
+          <div id="boardArea" class="board-area" aria-label="Tablero de puzzle"></div>
+
+          <div class="panel-actions">
+            <button id="startBtn" class="btn btn-primary">Iniciar</button>
+            <button id="nextBtn" class="btn" disabled>Siguiente</button>
+            <button id="submitBtn" class="btn">Enviar (puntuar)</button>
+          </div>
+        </div>
+      </section>
+
+      <aside class="right">
+        <div class="card">
+          <h3>Modo</h3>
+          <select id="modeSelect">
+            <option value="free">Libre</option>
+            <option value="guided">Guiado</option>
+            <option value="exam">Examen</option>
+          </select>
+          <hr />
+          <h3>Progreso</h3>
+          <div id="progressBar" class="progress">
+            <div id="progressFill" class="progress-fill"></div>
+          </div>
+          <div id="score">Puntaje: 0</div>
+          <hr />
+          <h3>Instrucciones</h3>
+          <p>Arrastra las piezas con el mouse. En modo guiado el sistema marcará el movimiento sugerido.</p>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="footer">Demo para práctica — fondo gris medio, cronómetro arriba derecha, arrastrar con mouse.</footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
